@@ -4,17 +4,17 @@
 // I AM NOT DONE
 
 mod delicious_snacks {
-    use self::fruits::PEAR as fruit;
-    use self::veggies::CUCUMBER as veggie;
+    pub use self::fruits::PEAR as fruit;
+    pub use self::veggies::CUCUMBER as veggie;
 
-    mod fruits {
-        pub const PEAR: &'static str = "Pear";
-        pub const APPLE: &'static str = "Apple";
+    pub mod fruits {
+        const PEAR: &'static str = "Pear";
+        const APPLE: &'static str = "Apple";
     }
 
-    mod veggies {
-        pub const CUCUMBER: &'static str = "Cucumber";
-        pub const CARROT: &'static str = "Carrot";
+    pub mod veggies {
+        const CUCUMBER: &'static str = "Cucumber";
+        const CARROT: &'static str = "Carrot";
     }
 }
 
